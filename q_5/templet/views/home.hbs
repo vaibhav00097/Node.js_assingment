@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .div {
+            margin-top: 100px;
+        }
+
+        .abc {
+            margin-top: 50px;
+            margin-left: 150px;
+        }
+
+        .main {
+            display: flex;
+        }
+
+        .kk {
+            display: flex;
+            margin-top: 100px;
+            margin-left: 150px;
+            font-size: 20px;
+
+        }
+
+        .aa {
+            display: flex;
+            margin-left: 150px;
+            margin-top: -30px;
+            font-size: 20px;
+        }
+
+        .left select {
+            width: 250px;
+            height: 30px;
+        }
+
+        .left label {
+            font-weight: 900;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body onload="getcontries()">
+    <div class="main">
+        
+        {{!-- <audio src="https://sampleswap.org/samples-ghost/DRUMS%20and%20SINGLE%20HITS/snares/5[kb]sidestick.aif.mp3"
+            class="audio"></audio> --}}
+        <div class="div">
+            <div class="left">
+                <div class="abc">
+
+                    <label for="">Country</label>
+                    <select name="country" id="country" class="form-control" onchange="timeanddate(value)">
+                        <option value="0">---Select country---</option>
+                    </select>
+                </div>
+{{!--                 
+                <div class="abc">
+                    <label for="">State</label>
+                    <select name="state" id="state" class="form-control" onchange="getcity(value)">
+                        <option value="0">---Select country---</option>
+                    </select>
+                </div>
+                <div class="abc">
+                    <label for="">City</label>
+                    <select name="city" id="city" class="form-control">
+                        <option value="0">---Select country---</option>
+                    </select>
+                </div> --}}
+            </div>
+        </div>
+        <div class="details">
+            <div class="kk">
+                <h3>latitude : </h3>
+                <h3 id="mylatitude">loading..</h3>
+            </div>
+            <div class="aa">
+                <h3>longitude : </h3>
+                <h3 id="mylongitude">loading..</h3>
+            </div>
+            <div class="aa">
+                <h3>datetime : </h3>
+                <h3 id="mydatetime">loading..</h3>
+            </div>
+            <div class="aa">
+                <h3>requested_location : </h3>
+                <h3 id="myrequested_location">loading..</h3>
+            </div>
+            <div class="aa">
+                <h3>timezone_location : </h3>
+                <h3 id="mytimezone_location">loading..</h3>
+            </div>
+            <div class="aa">
+                <h3>timezone_name : </h3>
+                <h3 id="mytimezone_name">loading..</h3>
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <script src="js/data.js"></script>
+</body>
+
+</html>
