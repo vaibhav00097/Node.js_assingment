@@ -32,12 +32,11 @@ const getcontries = () => {
     .catch((error) => console.log("error", error));
 };
 
-
 var ccode;
 var kkk;
 const timeanddate = (val) => {
   ccode = val;
-//   alert(ccode);
+  //   alert(ccode);
   fetch(
     `https://timezone.abstractapi.com/v1/current_time/?api_key=1089efabd8e54844810c1883ba1b2b80&location=${ccode}`
   )
@@ -47,7 +46,7 @@ const timeanddate = (val) => {
     .then((data) => {
       mylatitude.innerHTML = data.latitude;
       mylongitude.innerHTML = data.longitude;
-       kkk = (mydatetime.innerHTML = data.datetime);
+      kkk = mydatetime.innerHTML = data.datetime;
       myrequested_location.innerHTML = data.requested_location;
       mytimezone_location.innerHTML = data.timezone_location;
       mytimezone_name.innerHTML = data.timezone_name;
@@ -56,6 +55,5 @@ const timeanddate = (val) => {
       console.log(err);
     });
 };
-
 
 setInterval(setDate, 1000);
